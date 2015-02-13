@@ -7,5 +7,11 @@ describe("triangle", function() {
     expect(triangle(3, 3, 3)).to.equal("eqilateral")
   });
 
+  it("returns isosceles if exactly two sides are equal length", function() {
+    expect(triangle(5, 5, 7)).to.equal("isosceles")
+  })
 
+  it("returns scalene if all three sides are of different length", function() {
+    expect(triangle(5, 7, 9)).to.equal("scalene")
+  });
 });
