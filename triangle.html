@@ -9,9 +9,9 @@
   </head>
   <body>
     <div class="container">
-      <h4>If you've ever wondered if the three lengths of substrate you have can be formed into the geometrical
-        wonder known as the triangle, and if so what to call the resulting shape, this is the tool for you.</h4>
-      <h5>Simply enter the measurements of the 3 pieces from which you'd like to try building a triangle:</h5>
+      <h3>If you've ever wondered if the three lengths of substrate you have can be formed into the geometrical
+        wonder known as the triangle, and if so what to call the resulting triangle, this is the tool for you.</h3>
+      <h4>Simply enter the measurements of the 3 pieces from which you'd like to try building a triangle:</h4>
       <form class="form-group" id="triangle-tester">
         <label for="sideA">First side:</label>
         <input name="sideA" id="sideA" type="text">
@@ -22,20 +22,26 @@
         <label for="sideC">Third side:</label>
         <input name="sideC" id="sideC" type="text">
 
-        <button type="submit" class="btn btn-lg btn-info">Attempt Triangulation</button>
+        <button type="submit" id="your-sides" class="btn btn-lg btn-info"><span class="glyphicon glyphicon-ok-sign"></span>  Attempt Triangulation</button>
       </form>
       <div id="result">
-        <h3>You entered <span class="sideA"></span>, <span class="sideB"></span>, <span class="sideC"></span>.</h3>
+        <h3>You entered <span class="sideA"></span>, <span class="sideB"></span>, <span class="sideC"></span></h3>
 
           <div id="tri-yes">
-            <p>These lengths will form a(n) <span class="tri-type"></span> triangle.</p>
+            <h4>These lengths will form a(n) <span class="tri-type"></span> triangle.</h4>
           </div>
 
           <div id="tri-no">
-            <p>It is impossible to form a triangle with these lengths.</p>
+            <h4>It is impossible to form a triangle with these lengths. Hint: At least two sides must add to be more than the third side in order to form a triangle.</h4>
           </div>
-          
+
       </div>
+      <br>
+      <br>
+      <h3>If you don't have anything readily available to measure for triangle-ability, try generating some random numbers to be the lengths of the three sides and see if they make a triangle.</h3>
+        <form id="random-triangulation">
+          <button type="submit" id="random-sides" class="btn btn-lg btn-success"><span class="glyphicon glyphicon-question-sign"></span> Triangulate Random Sides</button>
+        </form>
     </div>
   </body>
 </html>

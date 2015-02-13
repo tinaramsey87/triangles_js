@@ -15,3 +15,9 @@ describe("triangle", function() {
     expect(triangle(5, 7, 9)).to.equal("scalene")
   });
 });
+
+describe("randomSide", function() {
+  it("generates a random number between one and onehundred", function() {
+    expect(randomSide(1, 100)).to.equal({from: 1, to: 100})
+  });
+});

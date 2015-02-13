@@ -9,3 +9,39 @@
 #tri-no {
   display: none;
 }
+
+body {
+  background-color: #006151;
+
+}
+
+.container {
+  background-color: #18B197;
+  margin-top: 5%;
+  width: 900px;
+  height: 650px;
+  margin-left: 0 auto;
+  padding: 15px;
+  border: solid #007B66;
+  border-radius: 10px;
+
+}
+
+
+.form-group {
+  margin-left: 23px;
+}
+
+#your-sides {
+  margin-left: 300px;
+
+}
+
+#random-sides {
+  margin-left: 300px;
+}
+
+
+input[type=text]{
+  border-radius:10px;
+}
