@@ -12,7 +12,7 @@
       <h4>If you've ever wondered if the three lengths of substrate you have can be formed into the geometrical
         wonder known as the triangle, and if so what to call the resulting shape, this is the tool for you.</h4>
       <h5>Simply enter the measurements of the 3 pieces from which you'd like to try building a triangle:</h5>
-      <form class="form-group">
+      <form class="form-group" id="triangle-tester">
         <label for="sideA">First side:</label>
         <input name="sideA" id="sideA" type="text">
 
@@ -24,17 +24,17 @@
 
         <button type="submit" class="btn btn-lg btn-info">Attempt Triangulation</button>
       </form>
-
       <div id="result">
         <h3>You entered <span class="sideA"></span>, <span class="sideB"></span>, <span class="sideC"></span>.</h3>
 
           <div id="tri-yes">
-            <p>These lengths will form a <span class="tri-type"></span> triangle.</p>
+            <p>These lengths will form a(n) <span class="tri-type"></span> triangle.</p>
           </div>
 
           <div id="tri-no">
             <p>It is impossible to form a triangle with these lengths.</p>
           </div>
+          
       </div>
     </div>
   </body>
