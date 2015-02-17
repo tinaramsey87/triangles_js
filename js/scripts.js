@@ -8,14 +8,13 @@ var triangle = function(sideA, sideB, sideC) {
   if ((sideA + sideB <= sideC) || (sideB + sideC <= sideA) || sideC + sideA <= sideB) {
     return false;
   } if ((sideA === sideB) && (sideB === sideC)) {
-    return "eqilateral";
+    return "equilateral";
   } if ((sideA === sideB) || (sideB === sideC) || (sideA === sideC)) {
     return "isosceles";
   } else {
     return "scalene";
   }
 };
-
 
 $(document).ready(function() {
   $("form#triangle-tester").submit(function(event) {
@@ -31,31 +30,37 @@ $(document).ready(function() {
 
     $("#result").show();
 
-    if (result === "eqilateral") {
+    if (result === "equilateral") {
       $("#tri-yes").show();
       $("#tri-no").hide();
       $(".tri-type").text(result)
+      $("ul#equilateral").append("<li><span class='type'>" + sideA + ", " + sideB + ", " + sideC + "</span></li>");
     }
 
     if (result === "isosceles") {
       $("#tri-yes").show();
       $("#tri-no").hide();
       $(".tri-type").text(result)
+      $("ul#isosceles").append("<li><span class='type'>" + sideA + ", " + sideB + ", " + sideC + "</span></li>");
     }
 
     if (result === "scalene") {
       $("#tri-yes").show();
       $("#tri-no").hide();
       $(".tri-type").text(result)
+      $("ul#scalene").append("<li><span class='type'>" + sideA + ", " + sideB + ", " + sideC + "</span></li>");
     }
 
     if (!result) {
       $("#tri-no").show();
       $("#tri-yes").hide();
+      alert("The sides you provided cannot create a triangle.");
     }
+    $("input#sideA").val("");
+    $("input#sideB").val("");
+    $("input#sideC").val("");
     event.preventDefault();
   });
-
 
   $("form#random-triangulation").submit(function(event) {
     var sideA = (randomSide(1, 100));
@@ -94,5 +99,4 @@ $(document).ready(function() {
     }
     event.preventDefault();
   });
-
 });

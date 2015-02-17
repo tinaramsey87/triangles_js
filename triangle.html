@@ -14,13 +14,13 @@
       <h4>Simply enter the measurements of the 3 pieces from which you'd like to try building a triangle:</h4>
       <form class="form-group" id="triangle-tester">
         <label for="sideA">First side:</label>
-        <input name="sideA" id="sideA" type="text">
+        <input name="sideA" id="sideA" type="text" required>
 
         <label for="sideB">Second side:</label>
-        <input name="sideB" id="sideB" type="text">
+        <input name="sideB" id="sideB" type="text" required>
 
         <label for="sideC">Third side:</label>
-        <input name="sideC" id="sideC" type="text">
+        <input name="sideC" id="sideC" type="text" required>
 
         <button type="submit" id="your-sides" class="btn btn-lg btn-info"><span class="glyphicon glyphicon-ok-sign"></span>  Attempt Triangulation</button>
       </form>
@@ -36,8 +36,31 @@
           </div>
 
       </div>
-      <br>
-      <br>
+
+    <div class="row">
+      <div class="col-md-4">
+        <h3>Equilateral triangles</h3>
+        <ul id="equilateral">
+
+        </ul>
+      </div>
+
+      <div class="col-md-4">
+        <h3>Isosceles triangles</h3>
+        <ul id="isosceles">
+
+        </ul>
+      </div>
+
+      <div class="col-md-4">
+        <h3>Scalene triangles</h3>
+        <ul id="scalene">
+
+        </ul>
+      </div>
+    </div>
+
+      <hr>
       <h3>If you don't have anything readily available to measure for triangle-ability, try generating some random numbers to be the lengths of the three sides and see if they make a triangle.</h3>
         <form id="random-triangulation">
           <button type="submit" id="random-sides" class="btn btn-lg btn-success"><span class="glyphicon glyphicon-question-sign"></span> Triangulate Random Sides</button>
